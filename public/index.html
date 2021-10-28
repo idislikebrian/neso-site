@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
+    <title>[NESO] Non-Existent Space Organization</title>
+    <style>
+      * {
+        font-family: 'Open Sans Condensed', sans-serif;
+        margin: 0;
+      }
+      p {
+        margin: 1em;
+      }
+      h1 {
+        margin: 0.67em;
+        font-size: 22pt;
+      }
+      h2 {
+        margin: 1em;
+        /* text-indent: 30px; */
+        text-transform: uppercase;
+        margin-top: 0.67em;
+        margin-bottom: 0.67em;
+        margin-left: 30;
+        margin-right: 0;
+      }
+      h3 {
+        margin: 1em;
+      }
+      h4 {
+        margin: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+    <script type='text/javascript'>    
+      var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1qylFKLk_EoLVIWKIEdEwQVDKEIZ3nBP2oa1Lyjm-D2g/edit#gid=1641582698';
+
+      function init() {
+        Tabletop.init( { key: publicSpreadsheetUrl,
+                        callback: showInfo,
+                        simpleSheet: true } )
+      }
+
+      function showInfo(data, tabletop) {
+        alert('Successfully processed!')
+        console.log(data);
+      }
+
+      window.addEventListener('DOMContentLoaded', init)
+    </script>
+    <div id="root"></div>
+  </body>
+</html>
