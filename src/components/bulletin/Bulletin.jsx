@@ -17,7 +17,6 @@ export default function Bulletin() {
             <Router>
                 <Switch>
                     <Route exact path="/">
-                    <BlogList/>
                     </Route>
                     <Route path="/create">
                     <Create/>
