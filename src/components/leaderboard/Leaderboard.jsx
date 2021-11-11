@@ -8,6 +8,7 @@ export default function Leaderboard() {
     return (
         <div className="leaderboard">
             <h2>Leaderboard</h2>
+            <center>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin feugiat.
             <table>
                 <tr>
@@ -55,6 +56,7 @@ export default function Leaderboard() {
                     <td>SCORE</td>
                 </tr>
             </table>
+            </center>
             <ul>
                 {data.map((item, i) => (
                 <Fragment key={i}>

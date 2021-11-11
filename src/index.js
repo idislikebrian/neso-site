@@ -7,6 +7,7 @@ import {
   Link
 } from "react-router-dom";
 import App from './App';
+import WebFont from 'webfontloader';
 
 const Tabletop = require('tabletop');
  
