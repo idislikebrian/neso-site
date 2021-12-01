@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'G Display';
-    src: url('src/fonts/GDisplay-Regular.woff2') format('woff2'),
-        url('src/fonts/GDisplay-Regular.woff') format('woff');
+    src: url('GDisplay-Regular.woff2') format('woff2'),
+        url('GDisplay-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -9,9 +9,28 @@
 
 @font-face {
     font-family: 'G Display Extended';
-    src: url('src/fonts/GDisplay-Extended.woff2') format('woff2'),
-        url('src/fonts/GDisplay-Extended.woff') format('woff');
+    src: url('GDisplay-Extended.woff2') format('woff2'),
+        url('GDisplay-Extended.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'G Display Extended';
+    src: url('GDisplay-Extended.woff2') format('woff2'),
+        url('GDisplay-Extended.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'G Display';
+    src: url('GDisplay-Regular.woff2') format('woff2'),
+        url('GDisplay-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
