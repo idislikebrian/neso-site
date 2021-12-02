@@ -13,10 +13,12 @@ const BlogList = ({blogs, title}) => {
             {blogs.map(blog => (
                 <div className="blog-preview" key={blog.id}>
                     <Router>
+                    <p>{blog.date}</p>
                     <Link to={`/blogs/${blog.id}`}>
                         <h2>{blog.title}</h2>
-                        <p>Written by {blog.author}</p>
                     </Link>
+                    <div><p>{blog.body}</p></div>
+                    <p>Written by {blog.author}</p>
                     </Router>
                 </div>
             ))}

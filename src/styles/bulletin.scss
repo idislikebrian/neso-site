@@ -1,0 +1,9 @@
+.bulletin{
+    background-color: #F3F0DF;
+    overflow: scroll;
+    scrollbar-width: none;
+
+    .blog-preview {
+        border-bottom: 2px solid black;
+    }
+}

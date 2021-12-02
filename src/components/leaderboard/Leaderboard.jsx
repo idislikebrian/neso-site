@@ -1,5 +1,12 @@
-import "./leaderboard.scss"
+import "../../../src/styles/leaderboard.scss"
 import React, { useEffect, useState, Fragment } from "react";
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
+import LeaderboardData from "../../screens/LeaderboardData"
 import Tabletop from "tabletop";
 
 export default function Leaderboard() {
@@ -7,66 +14,12 @@ export default function Leaderboard() {
     
     return (
         <div className="leaderboard">
-            <h2>Leaderboard</h2>
-            <center>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin feugiat.
-            <table>
-                <tr>
-                    <th>Team</th>
-                    <th>Score</th>
-                </tr>
-                <tr>
-                    <td>TEAM_1</td>
-                    <td>SCORE</td>
-                </tr>
-                <tr>
-                    <td>TEAM_2</td>
-                    <td>SCORE</td>
-                </tr>
-                <tr>
-                    <td>TEAM_3</td>
-                    <td>SCORE</td>
-                </tr>
-                <tr>
-                    <td>TEAM_4</td>
-                    <td>SCORE</td>
-                </tr>
-                <tr>
-                    <td>TEAM_5</td>
-                    <td>SCORE</td>
-                </tr>
-                <tr>
-                    <td>TEAM_6</td>
-                    <td>SCORE</td>
-                </tr>
-                <tr>
-                    <td>TEAM_7</td>
-                    <td>SCORE</td>
-                </tr>
-                <tr>
-                    <td>TEAM_8</td>
-                    <td>SCORE</td>
-                </tr>
-                <tr>
-                    <td>TEAM_9</td>
-                    <td>SCORE</td>
-                </tr>
-                <tr>
-                    <td>TEAM_10</td>
-                    <td>SCORE</td>
-                </tr>
-            </table>
-            </center>
-            <ul>
-                {data.map((item, i) => (
-                <Fragment key={i}>
-                    Testing
-                <li>URL -- {item.rank}</li>
-                <li>Email - {item.team}</li>
-                <br />
-                </Fragment>
-                ))}
-            </ul>
+            <div className="sectionhead"><h2>Leaderboard</h2></div>
+            <Router>
+                <Route exact path="/">
+                <LeaderboardData/>
+                </Route>
+            </Router>
         </div>
     )
 }

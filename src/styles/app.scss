@@ -1,0 +1,58 @@
+@import '../fonts/fonts.scss';
+
+.app{
+    height: 100vh;
+    font-family: 'G Display Extended', sans-serif;
+    
+    .sections{
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: #F3F0DF; 
+        position: relative;
+        top: 70px;
+        scrollbar-width: none;
+
+        > *{
+            width: calc(100vw/3);
+            height: calc(100vh - 70px);
+            float: left;
+        }
+        
+        h2 {
+            font-size: 20px;
+
+        }
+        
+        h3 {
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+        
+        h4 {
+            font-size: 14px;
+        }
+
+        p {
+            font-size: 12px;
+            text-transform: none;
+        }
+
+       
+    }
+
+    .sectionhead {
+        
+        h2 {
+        font-family: 'G Display Extended';
+        font-size: 26px;
+        }
+
+        color: #EFECDB;
+        background-color: black;
+        padding: 10px;
+    }
+
+    .rules-block {
+        border-bottom: 2px solid black;
+    }
+}

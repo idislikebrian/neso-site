@@ -1,14 +1,19 @@
-import './rules.scss'
+import '../../../src/styles/rules.scss'
 
 export default function Rules() {
     return (
         <div className="rules">
-            <h2>Rules</h2>
-                <h3>1. Introduction</h3>
+            <div className="sectionhead">
+                <h2>Rules</h2>
+            </div>
+            <div className="rules-block">
+                <h3>Introduction</h3>
                         <p>This document provides the rules and regulations for the 2021 Non Existent Space Company challenge.</p>
                         <p>The NESO challenge is a fictional space race in which teams design and fly a rocket to meet a specified set of mission and performance goals, in order to win a mission contract.</p>
                         <p>The winner of this challenge will receive a trophy and an exclusive contract to fly rockets for NESO. In this competition you will enter your independent space company where you design, build, fly, and retrieve your model rocket. Each space company is scored on a variety of factors listed in this rule book.</p>
-                <h3>2. Contest Rules</h3>
+            </div>
+            <div className="rules-block">
+                <h3>Contest Rules</h3>
                     <h4>2.1 Safety</h4> 
                         <p>Watch yourself. Rockets will be inspected before launch and observed during flight by a NESO official, whose judgment on their compliance with the Safety Code and with these rules will be final. Teams are encouraged to consult with designated NESO officials who are running this event.</p>
                     <h4>2.2 Teams</h4>
@@ -46,8 +51,11 @@ export default function Rules() {
                         <p>Rockets may not use an externally generated signal such as radio or computer control (except GPS navigation satellite signals) for any purpose after liftoff. They may use autonomous onboard control systems or altimeters separate from the official scoring altimeter to control any aspect of flight as long as these do not involve the use of pyrotechnic charges.</p>
                     <h4>2.14 Places</h4>
                         <p>Places in the final fly-off of the competition will be determined based on the sum of the altitude and duration scores. At the fly-offs at least 10 teams will be invited to make a second flight based on the results of their first flights in the second flights, rockets with which have issues that would otherwise rate a replacement flight under the rules #2.7 or 2.9 will not receive a replacement flight. Prizes awarded to the top places will be awarded only to those teams that make a second flight. The top final places will be ranked based on the scores from the qualified flights made at the fly-off. The remaining places will be awarded based on the scores from their flight. Ties will be results in pooling and even splitting of the prizes for the affected places –- for example, a two-way tie for fourth place would result in a merger and even division of the prizes for 4th and 5th places. If there is a tie for first, second, or third place, the teams involved in the tie will be required to make a third flight to determine the final places. Non-Existent Space Organization reserves the right to make all last and final contest determinations.</p>
-                <h3>3. NESO National Standards</h3>
+            </div>
+            <div className="rules-block">
+                <h3>NESO National Standards</h3>
                         <p>This document is an example of what a voluntary consensus standard might look like within the Aerospace industry. The Non-Existent Space Organization organizes and facilitates groups of experts to write approve and publish these standards that may contain requirements and best practices. Standards help to reduce costs and improve levels of fun, safety and design, manufacturing, and operations.</p>
+            </div>
         </div>
     )
 }

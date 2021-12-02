@@ -2,21 +2,23 @@ import BlogList from "../../screens/BlogList"
 import Create from "../../screens/Create"
 import BlogDetails from "../../screens/BlogDetails"
 import NotFound from "../../screens/NotFound"
-import "./bulletin.scss"
+import "../../../src/styles/bulletin.scss"
 import {
     BrowserRouter as Router,
     Switch,
     Route,
     Link
   } from "react-router-dom";
+import Home from "../../screens/Home"
 
 export default function Bulletin() {
     return (
         <div className="bulletin">
-            <h2>Bulletin</h2>
+            <div className="sectionhead"><h2>Bulletin</h2></div>
             <Router>
                 <Switch>
                     <Route exact path="/">
+                    <Home/>
                     </Route>
                     <Route path="/create">
                     <Create/>
