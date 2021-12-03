@@ -17,7 +17,9 @@ const BlogList = ({blogs, title}) => {
                     <Link to={`/blogs/${blog.id}`}>
                         <h2>{blog.title}</h2>
                     </Link>
+                    <center>
                     <div dangerouslySetInnerHTML={{ __html: blog.youtubeLink }}></div>
+                    </center>
                     <div><p>{blog.body}</p></div>
                     <p>Written by {blog.author}</p>
                     </Router>
