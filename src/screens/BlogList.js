@@ -20,7 +20,7 @@ const BlogList = ({blogs, title}) => {
                     <center>
                     <div dangerouslySetInnerHTML={{ __html: blog.youtubeLink }}></div>
                     </center>
-                    <div><p>{blog.body}</p></div>
+                    <div dangerouslySetInnerHTML={{__html:blog.body}}></div>
                     <p>Written by {blog.author}</p>
                     </Router>
                 </div>
