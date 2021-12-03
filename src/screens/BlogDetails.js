@@ -20,6 +20,7 @@ const BlogDetails = () => {
             {error && <div>{error}</div>}
             <article >
                 <h2>{blog.title}</h2>
+                <p>{blog.date}</p>
                 <p>Written by {blog.author}</p>
                 <div>{blog.body}</div>
             </article>

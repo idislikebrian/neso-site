@@ -8,6 +8,7 @@
         border-collapse: collapse;
         margin: 0 auto;
         height: 100%;
+
     }
     
     th {
@@ -16,11 +17,14 @@
         margin: 0 auto;
         text-transform: uppercase;
         font-size: 24px;
+
     }
 
     td {
         height: 100%;
         border: 1px solid black;
         margin: 0 auto;
+        display: flex;
+        flex: 1;
     }
 }
