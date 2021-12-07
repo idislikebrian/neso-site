@@ -12,14 +12,25 @@ import Tabletop from "tabletop";
 export default function Leaderboard() {
     const [data, setData] = useState([]);
     
+    var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1qylFKLk_EoLVIWKIEdEwQVDKEIZ3nBP2oa1Lyjm-D2g/edit#gid=1641582698';
+
+    function init() {
+    Tabletop.init( { key: publicSpreadsheetUrl,
+                    callback: showInfo,
+                    simpleSheet: true } )
+    }
+
+    function showInfo(data, tabletop) {
+    alert('Successfully processed!')
+    console.log(data);
+    }
+
+    window.addEventListener('DOMContentLoaded', init)
+
     return (
         <div className="leaderboard">
             <div className="sectionhead"><h2>Leaderboard</h2></div>
-            <Router>
-                <Route exact path="/">
                 <LeaderboardData/>
-                </Route>
-            </Router>
         </div>
     )
 }
