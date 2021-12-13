@@ -7,15 +7,18 @@
       name="Non-Existent Space Organization"
       content="A rocket club for misfits"
     />
-    <link href='https://fonts.googleapis.com/css?family=Space Mono' rel='stylesheet'>
+    <link
+      href="https://fonts.googleapis.com/css?family=Space Mono"
+      rel="stylesheet"
+    />
     <title>[NESO] Non-Existent Space Organization</title>
     <style>
       * {
-        font-family: 'G Display', sans-serif;
+        font-family: "G Display", sans-serif;
         margin: 0;
       }
       p {
-        font-family: 'Space Mono', monospace;
+        font-family: "Space Mono", monospace;
         margin: 1em;
       }
       h1 {
@@ -38,25 +41,29 @@
         margin: 1em;
       }
     </style>
+    <script id="react-dotenv" src="./env.js"></script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
-    <script type='text/javascript'>    
-      var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1qylFKLk_EoLVIWKIEdEwQVDKEIZ3nBP2oa1Lyjm-D2g/edit#gid=1641582698';
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js"></script>
+    <script type="text/javascript">
+      var publicSpreadsheetUrl =
+        "https://docs.google.com/spreadsheets/d/1qylFKLk_EoLVIWKIEdEwQVDKEIZ3nBP2oa1Lyjm-D2g/edit#gid=1641582698";
 
       function init() {
-        Tabletop.init( { key: publicSpreadsheetUrl,
-                        callback: showInfo,
-                        simpleSheet: true } )
+        Tabletop.init({
+          key: publicSpreadsheetUrl,
+          callback: showInfo,
+          simpleSheet: true,
+        });
       }
 
       function showInfo(data, tabletop) {
-        alert('Successfully processed!')
+        alert("Successfully processed!");
         console.log(data);
       }
 
-      window.addEventListener('DOMContentLoaded', init)
+      window.addEventListener("DOMContentLoaded", init);
     </script>
     <div id="root"></div>
   </body>
