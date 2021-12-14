@@ -27,7 +27,7 @@
     "serve": "react-dotenv && serve build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "start-json": "json-server --watch ./src/data/db.json --port 8000",
+    "start-json": "json-server --watch ./src/data/db.json",
     "dev": "concurrently --kill-others \"npm run start\" \"npm run start-json\""
   },
   "eslintConfig": {
