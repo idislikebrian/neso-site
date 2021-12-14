@@ -6,7 +6,6 @@ import {
   } from "react-router-dom";
 import { GoogleSpreadsheet } from "google-spreadsheet";
 import React from "react";
-import env from "react-dotenv";
 
 const LeaderboardData = ({blogs, title}) => {
    
