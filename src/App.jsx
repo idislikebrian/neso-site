@@ -5,6 +5,7 @@ import Bulletin from "./components/bulletin/Bulletin";
 import "./styles/app.scss";
 
 function App() {
+  console.log(process.env.React_App_SPREADSHEET_ID)
   return (
     <div className="app">
      <Topbar/>
