@@ -3,11 +3,11 @@ import useFetch from './useFetch';
 
 const BlogDetails = () => {
     const { id } = useParams();
-    const { data: blog, error, isPending } =  useFetch('https://neso-server.herokuapp.com/blogs/' + id);
+    const { data: blog, error, isPending } =  useFetch('https://my-json-server.typicode.com/idislikebrian/neso-server/blogs/' + id);
     const history = useHistory();
 
     const handleClick = () => {
-        fetch('https://neso-server.herokuapp.com/blogs/'+ blog.id, {
+        fetch('https://my-json-server.typicode.com/idislikebrian/neso-server/blogs/'+ blog.id, {
             method: 'DELETE'
         }).then(() => {
             history.push('/');

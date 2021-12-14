@@ -14,7 +14,7 @@ const Create = () => {
 
         setIsPending(true);
 
-        fetch('https://neso-server.herokuapp.com/blogs/', {
+        fetch('https://my-json-server.typicode.com/idislikebrian/neso-server/blogs/', {
             method: 'POST',
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(blog)
