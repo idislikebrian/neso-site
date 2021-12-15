@@ -9,10 +9,10 @@ import React from "react";
 
 const LeaderboardData = ({blogs, title}) => {
    
-    const SPREADSHEET_ID = process.env.React_App_SPREADSHEET_ID;
-    const SHEET_ID = process.env.React_App_SHEET_ID;
-    const CLIENT_EMAIL = process.env.React_App_CLIENT_EMAIL;
-    const PRIVATE_KEY = process.env.React_App_PRIVATE_KEY;
+    const SPREADSHEET_ID = process.env.REACT_APP_SPREADSHEET_ID;
+    const SHEET_ID = process.env.REACT_APP_SHEET_ID;
+    const CLIENT_EMAIL = process.env.REACT_APP_CLIENT_EMAIL;
+    const PRIVATE_KEY = process.env.REACT_APP_PRIVATE_KEY;
 
     const doc = new GoogleSpreadsheet(SPREADSHEET_ID);
     const [rowsData,setRowsData]=React.useState([])
