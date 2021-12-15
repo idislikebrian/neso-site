@@ -22,7 +22,7 @@ const [sheetRows,setRows]=React.useState([])
         try {
         await doc.useServiceAccountAuth({
             client_email: CLIENT_EMAIL,
-            private_key: PRIVATE_KEY,
+            private_key: PRIVATE_KEY.replace(/\\n/g, '\n'),
         });
         // loads document properties and worksheets
         await doc.loadInfo();
