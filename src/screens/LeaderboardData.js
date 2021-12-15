@@ -18,6 +18,7 @@ const LeaderboardData = ({blogs, title}) => {
     const [rowsData,setRowsData]=React.useState([])
     const getSpreadSheet = async (row) => {
         let dataArr=[];
+        console.log(CLIENT_EMAIL,PRIVATE_KEY)
         try {
         await doc.useServiceAccountAuth({
             client_email: CLIENT_EMAIL,
@@ -27,9 +28,9 @@ const LeaderboardData = ({blogs, title}) => {
         let res=await doc.loadInfo();
         const sheet = doc.sheetsByIndex[0];
         const rows = await sheet.getRows();
-        // console.log(rows)
+        console.log(rows)
+        console.log(res)
         rows?.map((row)=>{
-           
             let td=row?._rawData
             dataArr.push({team:td[0],score:td[2],rank:td[1]})
         })
