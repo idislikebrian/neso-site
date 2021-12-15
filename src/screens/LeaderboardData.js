@@ -13,7 +13,6 @@ const LeaderboardData = ({blogs, title}) => {
     const SHEET_ID = process.env.REACT_APP_SHEET_ID;
     const CLIENT_EMAIL = process.env.REACT_APP_CLIENT_EMAIL;
     const PRIVATE_KEY = process.env.REACT_APP_PRIVATE_KEY;
-const [sheetRows,setRows]=React.useState([])
     const doc = new GoogleSpreadsheet(SPREADSHEET_ID);
     const [rowsData,setRowsData]=React.useState([])
     const getSpreadSheet = async (row) => {
@@ -26,10 +25,10 @@ const [sheetRows,setRows]=React.useState([])
         });
         // loads document properties and worksheets
         await doc.loadInfo();
-        console.log(doc)
+        
         const sheet = doc.sheetsByIndex[0];
         const rows = await sheet.getRows();
-        setRows(rows)
+       
         if(rows&&rows?.length>0 && rows.length>1 && rows.length>2){
             rows?.map((row)=>{
                 let td=row?._rawData
@@ -43,12 +42,8 @@ const [sheetRows,setRows]=React.useState([])
         }
     };
     React.useEffect(()=>{
-        if(sheetRows.length===0){
-
             getSpreadSheet();   
-        }
-        console.log("---------")
-    })
+    },[])
     function compare(a, b) {
         const rankA = Number(a.rank)
         const rankB = Number(b.rank)
