@@ -18,22 +18,24 @@ const [sheetRows,setRows]=React.useState([])
     const [rowsData,setRowsData]=React.useState([])
     const getSpreadSheet = async (row) => {
         let dataArr=[];
-      
+      console.log(typeof PRIVATE_KEY)
         try {
         await doc.useServiceAccountAuth({
             client_email: CLIENT_EMAIL,
             private_key: PRIVATE_KEY,
         });
         // loads document properties and worksheets
-        let res=await doc.loadInfo();
+        await doc.loadInfo();
         console.log(doc)
         const sheet = doc.sheetsByIndex[0];
         const rows = await sheet.getRows();
         setRows(rows)
-        rows?.map((row)=>{
-            let td=row?._rawData
-            dataArr.push({team:td[0],score:td[2],rank:td[1]})
-        })
+        if(rows&&rows?.length>0 && rows.length>1 && rows.length>2){
+            rows?.map((row)=>{
+                let td=row?._rawData
+                dataArr.push({team:td[0],score:td[2],rank:td[1]})
+            })
+        }
         setRowsData(dataArr)
         
         } catch (e) {
