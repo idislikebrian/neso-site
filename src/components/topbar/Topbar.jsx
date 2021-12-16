@@ -1,30 +1,24 @@
+import React from 'react'
+import { useTime } from 'react-timer-hook';
 import "../../../src/styles/topbar.scss"
 import { Link } from 'react-router-dom';
 import logo from "../../images/NESO-02.png";
 
-var today = new Date();
-var date = (today.getMonth()+1) + ' ' + today.getDate() + ', ' + today.getFullYear();
-var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+
 
 export default function Topbar() {
-    // function currentTime() {
-    //     let date = new Date(); 
-    //     let hh = date.getHours();
-    //     let mm = date.getMinutes();
-    //     let ss = date.getSeconds();
-    //     let session = "AM";
-        
-    //     hh = (hh < 10) ? "0" + hh : hh;
-    //     mm = (mm < 10) ? "0" + mm : mm;
-    //     ss = (ss < 10) ? "0" + ss : ss;
-        
-    //     let time = hh + ":" + mm + ":" + ss;
-        
-    //     document.getElementById("clock").innerText = time; 
-    //     var t = setTimeout(function(){ currentTime() }, 1000); 
-    //   }
-      
-    // currentTime();
+    const {
+        seconds,
+        minutes,
+        hours,
+      } = useTime({ format: '24-hour'});
+ 
+      var time = (hours>9 ? hours : "0"+hours)+ ":" +(minutes>9 ? minutes : "0"+minutes) + ":" + (seconds>9 ? seconds : "0"+seconds) ;
+      var today = new Date();
+      let monthsArr=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+      var date = (monthsArr[today.getMonth()]) + ' ' + today.getDate() + ', ' + today.getFullYear();
+
+ 
 
     return (
         <div className="topbar">

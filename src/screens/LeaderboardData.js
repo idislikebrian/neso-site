@@ -25,7 +25,7 @@ const LeaderboardData = ({blogs, title}) => {
         });
         // loads document properties and worksheets
         await doc.loadInfo();
-        
+        console.log(doc)
         const sheet = doc.sheetsByIndex[0];
         const rows = await sheet.getRows();
        
